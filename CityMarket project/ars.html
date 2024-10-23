@@ -1,0 +1,38 @@
+``html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AR Treasure Hunt</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/AR-js-org/AR.js/3.3.2/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+        <a-marker preset="hiro">
+            <a-entity 
+                gltf-model="url(3D-model-url.glb)" 
+                scale="0.5 0.5 0.5" 
+                position="0 0 0">
+            </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
+```
+
+2. Creating QR Codes:
+You can use a QR code generator to create codes that link to the above HTML file hosted on a web server. Each QR code can correspond to different clues.
+
+3. Hosting the Project:
+Upload your HTML file to a web hosting service or use platforms like GitHub Pages, Netlify, or Vercel to host it. 
+
+4. 3D Model:
+Replace `3D-model-url.glb` in the code with the URL of your 3D model. You can find free models on sites like Sketchfab or create your own.
+
+5. Testing:
+Once everything is set up, print your QR codes and place them at the corresponding locations in the supermarket. When scanned, each QR code will lead to the AR experience where participants can see the 3D model.
+
+Make sure to test everything on a mobile device to ensure it works smoothly! Let me know if you need more help with any specific part.
+https://aframe.io/releases/1.2.0/aframe.min.js
+https://cdn.rawgit.com/AR-js-org/AR.js/3.3.2/aframe/build/aframe-ar.js

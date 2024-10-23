@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AR Treasure Hunt</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <style>
+        body { margin: 0; }
+        #info { position: absolute; top: 10px; left: 10px; color: white; }
+    </style>
+</head>
+<a-marker preset="hiro">
+    <a-entity gltf-model="model.glb" scale="0.5 0.5 0.5"></a-entity>
+    <a-text value="Clue 1: Find the brown building when you walk 5 meters straight to your left!" color="brown" position='0 0.5 0'></a-text>
+</a-marker>
+
+
+
+<body>
+    <div id="info">Scan the QR codes to find clues!</div>
+    <a-scene embedded arjs>
+        <a-marker preset="hiro">
+            <a-text value="Clue 1: Find the brown building whenn you walk 5 meters straight to the left!" color="yellow" position='0 0.5 0'></a-text>
+        </a-marker>
+        <a-marker preset="kanji">
+            <a-text value="Clue 2: Look at the tall tree beside you!" color="white" position='0 0.5 0'></a-text>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
